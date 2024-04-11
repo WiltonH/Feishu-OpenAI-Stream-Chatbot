@@ -1,14 +1,14 @@
 # 是否启用日志。
 ENABLE_LOG: true
 #  飞书
-APP_ID: cli_axxx
-APP_SECRET: xxx
-APP_ENCRYPT_KEY: xxx
-APP_VERIFICATION_TOKEN: xxx
+APP_ID: cli_a4b6a52791f8900b
+APP_SECRET: LkJnWE0rR0CdbUmYeK6aJgXq7h2TLoUg
+APP_ENCRYPT_KEY: 4UoFCldM8l1O9XvdsMwSFbRpXMFGM8nL
+APP_VERIFICATION_TOKEN: HOwQ0rFJz4TcBGlkCgaieeZEhprQBiyN
 # 请确保和飞书应用管理平台中的设置一致。这里建议直接用 Feishu-OpenAI-Stream-Chatbot 作为机器人名称，这样的话，如果你有多个bot就好区分
-BOT_NAME: xxx
+BOT_NAME: ChatGPT
 # openAI key 支持负载均衡 可以填写多个key 用逗号分隔
-OPENAI_KEY: sk-xxx,sk-xxx,sk-xxx
+OPENAI_KEY: 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
 # 服务器配置
 HTTP_PORT: 9000
 HTTPS_PORT: 9001
@@ -21,8 +21,10 @@ API_URL: https://api.openai.com
 HTTP_PROXY: ""
 # 访问OpenAi的 普通 Http请求的超时时间，单位秒，不配置的话默认为 550 秒
 OPENAI_HTTP_CLIENT_TIMEOUT:
-# openai 指定模型, 更多见 https://platform.openai.com/docs/models/model-endpoint-compatibility 中 /v1/chat/completions
-OPENAI_MODEL: gpt-3.5-turbo
+# openAI model 指定模型，默认为 gpt-3.5-turbo
+# 可选参数有："gpt-4-1106-preview", "gpt-4-32K","gpt-4","gpt-3.5-turbo-16k", "gpt-3.5-turbo"，"gpt-3.5-turbo-16k","gpt-3.5-turbo-1106" 等
+#  如果使用gpt-4，请确认自己是否有接口调用白名单
+OPENAI_MODEL: gpt-4
 
 # AZURE OPENAI
 AZURE_ON: true # set to true to use Azure rather than OpenAI
